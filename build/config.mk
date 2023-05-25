@@ -63,6 +63,7 @@ COMMON_FF_CFG_FLAGS+=--disable-videotoolbox
 # COMMON_FF_CFG_FLAGS+=--disable-everything
 COMMON_FF_CFG_FLAGS+=--disable-encoders
 COMMON_FF_CFG_FLAGS+=--enable-encoder=png
+COMMON_FF_CFG_FLAGS+=--enable-encoder=mpeg4
 
 # ./configure --list-decoders
 COMMON_FF_CFG_FLAGS+=--disable-decoders
@@ -82,6 +83,10 @@ COMMON_FF_CFG_FLAGS+=--disable-hwaccels
 # ./configure --list-muxers
 COMMON_FF_CFG_FLAGS+=--disable-muxers
 COMMON_FF_CFG_FLAGS+=--enable-muxer=mp4
+COMMON_FF_CFG_FLAGS+=--enable-muxer=rtp
+COMMON_FF_CFG_FLAGS+=--enable-muxer=rtp_mpegts
+COMMON_FF_CFG_FLAGS+=--enable-muxer=rtsp
+COMMON_FF_CFG_FLAGS+=--enable-muxer=flv
 
 # ./configure --list-demuxers
 COMMON_FF_CFG_FLAGS+=--disable-demuxers
@@ -101,6 +106,8 @@ COMMON_FF_CFG_FLAGS+=--enable-demuxer=hevc
 COMMON_FF_CFG_FLAGS+=--enable-demuxer=webm_dash_manifest
 COMMON_FF_CFG_FLAGS+=--enable-demuxer=rtp
 COMMON_FF_CFG_FLAGS+=--enable-demuxer=rtsp
+COMMON_FF_CFG_FLAGS+=--enable-demuxer=rawvideo
+COMMON_FF_CFG_FLAGS+=--enable-demuxer=yuv4mpegpipe
 
 # ./configure --list-parsers
 COMMON_FF_CFG_FLAGS+=--disable-parsers
@@ -147,6 +154,7 @@ COMMON_FF_CFG_FLAGS+=--disable-protocol=rtmp*
 COMMON_FF_CFG_FLAGS+=--enable-protocol=rtmp
 COMMON_FF_CFG_FLAGS+=--enable-protocol=rtmpt
 COMMON_FF_CFG_FLAGS+=--enable-protocol=rtp
+COMMON_FF_CFG_FLAGS+=--enable-protocol=udp
 COMMON_FF_CFG_FLAGS+=--disable-protocol=sctp
 COMMON_FF_CFG_FLAGS+=--disable-protocol=srtp
 COMMON_FF_CFG_FLAGS+=--disable-protocol=subfile

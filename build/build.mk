@@ -26,11 +26,11 @@ PKG_BIN_INSTALL_DIR     := install_out
 PKG_BIN_INSTALL         := $(PKG_BIN_INSTALL_DIR)/root
 
 ifeq ($(RK_APP_ARCH_TYPE), arm64)
-PKG_CFG_FLAGS           += --arch=aarch64 --enable-yasm
+PKG_CFG_FLAGS           += --arch=aarch64
 endif
 
 ifeq ($(RK_APP_ARCH_TYPE), arm)
-PKG_CFG_FLAGS           += --arch=arm --enable-neon --enable-yasm
+PKG_CFG_FLAGS           += --arch=arm --enable-neon
 endif
 
 ifeq ($(PKG_USE_THUMB2),YES)
